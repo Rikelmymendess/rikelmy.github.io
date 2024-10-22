@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilização do Cabeçalho com Design Gamer Supremo */
+header {
+    background-color: #0a0a12; /* Fundo escuro para destacar elementos neon */
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid #3c3c8e; /* Bordas para um efeito robusto e tecnológico */
+    box-shadow: 0 0 25px rgba(60, 60, 142, 0.6), inset 0 0 15px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* Estilo do Título Principal */
+header h1 {
+    color: #e0e0ff;
+    font-size: 4rem;
+    font-family: 'Press Start 2P', sans-serif; /* Fonte estilo pixel art */
+    text-shadow: 0 0 15px #ff007f, 0 0 25px #0fdbff, 0 0 35px #0fdbff; /* Efeito neon multicor */
+    letter-spacing: 3px;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+/* Animação de brilho no título */
+header h1:hover {
+    text-shadow: 0 0 25px #ff007f, 0 0 45px #0fdbff, 0 0 60px #ff007f; /* Brilho pulsante ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Estilo da Barra de Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Estilo dos Links de Navegação */
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 25px;
+    border-radius: 12px;
+    background-color: rgba(20, 20, 30, 0.8); /* Fundo translúcido para dar profundidade */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 255, 255, 0.2);
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+/* Efeito de Hover nos Links */
+nav ul li a:hover {
+    background-color: #0fdbff; /* Fundo de neon azul ao passar o mouse */
+    color: #141414;
+    border: 2px solid #ff007f; /* Bordas de neon rosa para destaque */
+    box-shadow: 0 0 15px #0fdbff, 0 0 25px rgba(255, 0, 127, 0.5);
+    transform: scale(1.15); /* Animação leve de expansão */
+    cursor: pointer;
+}
+
+/* Elementos Decorativos no Cabeçalho */
+header::before, header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 150%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff007f, #0fdbff, transparent);
+    animation: moveLine 4s linear infinite;
+    opacity: 0.6;
+}
+
+header::before {
+    transform: rotate(5deg);
+}
+
+header::after {
+    transform: rotate(-5deg);
+}
+
+/* Animação de Linha de Luz */
+@keyframes moveLine {
+    0% { left: -150%; }
+    100% { left: 150%; }
+}
+
+
+.game-card {
+    display: inline-block;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff007f;
+}
+
+.game-card img, .game-card canvas {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #0fdbff;
+    padding: 10px;
+}
+
+.game-card canvas {
+    border: 3px solid #ff007f;
+    background-color: #222;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.game-card canvas:hover {
+    box-shadow: 0 0 15px #0fdbff;
+}
+
+
+/* Estilização do Canvas para o Jogo da Cobrinha */
+#snakeGame {
+    border: 5px solid #0fdbff;
+    background-image: url('image/game-background.jpg'); /* Cenário de fundo personalizado */
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Efeitos visuais da cobrinha */
+.snake-body {
+    background: linear-gradient(145deg, #0066cc, #99ccff);
+    border: 1px solid #003366;
+    border-radius: 3px;
+}
+
+/* Estilo para o diamante */
+.diamond {
+    background: radial-gradient(circle, #d4af37, #ffd700, #ff4500);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffd700;
+}
